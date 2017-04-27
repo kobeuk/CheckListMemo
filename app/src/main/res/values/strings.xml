@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CheckListMemo</string>
+    <string name="memo_list_new_button">+</string>
 </resources>
