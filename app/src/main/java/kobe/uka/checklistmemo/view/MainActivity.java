@@ -1,33 +1,36 @@
 package kobe.uka.checklistmemo.view;
 
-import android.os.PersistableBundle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 
-import kobe.uka.checklistmemo.R;
+/**
+ * Created by uka on 2017/04/28.
+ */
 
-public class MemoListActivity extends MainActivity {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * クリエイト時
      * @param savedInstanceState
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.memo_list);
     }
 
     /**
-     * リスト表示
-     * controller xmlから値取得（）
-     * controller DBから値取得（）
-     *
+     * スタート時
      */
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     /**
      * レジューム時
-     * controller値保存（）
      */
     @Override
     protected void onResume() {
@@ -36,7 +39,6 @@ public class MemoListActivity extends MainActivity {
 
     /**
      * ポーズ時
-     * controller値保存（）
      */
     @Override
     protected void onPause() {
@@ -45,7 +47,6 @@ public class MemoListActivity extends MainActivity {
 
     /**
      * ストップ時
-     * controller値保存（）
      */
     @Override
     protected void onStop() {
@@ -53,19 +54,19 @@ public class MemoListActivity extends MainActivity {
     }
 
     /**
-     *新規ボタンタップ時
-     * controller新規画面遷移処理()
+     *再スタート時
      */
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
 
     /**
-     * リストシングルタップ時
-     * controller編集画面遷移処理()
+     *デストロイ
      */
-
-    /**
-     * リストロングタップ時
-     * controllerダイアログ表示処理()
-     */
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
 }
